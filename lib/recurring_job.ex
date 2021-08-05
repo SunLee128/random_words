@@ -1,0 +1,2 @@
+defmodule RecurringJob do
+end
