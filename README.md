@@ -1,4 +1,8 @@
 # RandomWords
-This is a simple example of setting recurring tasks and setting states using Elixir GenServer. 
+This is a simple example of setting a recurring task and maintaining states using Elixir GenServer. 
 
-This app makes two asynchronous api calls to fetch 2 random words every second and combine them to make a phrase. The 3 latest phrases are saved in the GenServer cache. 
+This app makes two asynchronous api calls to fetch two random words every second and combine them to make a phrase. The three most recent phrases are saved in the GenServer cache. 
+
+
+### Testing with mocks
+http://blog.plataformatec.com.br/2015/10/mocks-and-explicit-contracts/
