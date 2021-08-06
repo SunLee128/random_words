@@ -10,7 +10,7 @@ defmodule RandomWords.Words do
     %{phrase: "#{returned_adj} #{returned_noun}"}
   end
 
-  def get(url) do
+  defp get(url) do
     case HTTPoison.get(url) do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
         body |> Jason.decode!()

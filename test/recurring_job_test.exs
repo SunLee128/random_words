@@ -1,4 +1,4 @@
-defmodule RandomWordsTest do
+defmodule RecurringJobTest do
   use ExUnit.Case, async: true
 
   @adjective "https://random-word-form.herokuapp.com/random/adjective"
