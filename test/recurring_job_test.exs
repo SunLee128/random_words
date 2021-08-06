@@ -1,21 +1,15 @@
 defmodule RecurringJobTest do
   use ExUnit.Case, async: true
-
-  @adjective "https://random-word-form.herokuapp.com/random/adjective"
-  @noun "https://random-word-form.herokuapp.com/random/noun"
-  @server_name :endless_words
-  @refetch_interval :timer.seconds(1)
+  alias RandomWords.RecurringJob
 
   setup do
-    {:ok, pid} = RandomWords.start()
+    {:ok, pid} = RandomWords.init()
     {:ok, server: pid}
   end
 
   describe "get_words/1" do
     test "returns a phrase", %{server: pid} do
-      response = RandomWords.get_words()
-
-      IO.inspect(response)
+      assert %{phrase: "secretive equinox"} = RecurringJob.get_words()
     end
   end
 end

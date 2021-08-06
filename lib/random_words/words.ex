@@ -7,7 +7,7 @@ defmodule RandomWords.Words do
     noun = Task.async(fn -> get(@noun_url) end)
     [returned_adj | _] = Task.await(adj)
     [returned_noun | _] = Task.await(noun)
-    %{phrase: "#{returned_adj} #{returned_noun}"}
+    "#{returned_adj} #{returned_noun}"
   end
 
   defp get(url) do
